@@ -16,7 +16,8 @@
     </div>
     <div class="footer">
       <div class="footer-left">
-        <span>Chars: {{ text.length }}</span>
+        <span>Chars: {{ text.length }}, </span>
+        <span>Lines: {{ text.split('\n').length}}</span>
       </div>
     </div>
   </div>
