@@ -5,7 +5,7 @@
       :readonly="readonly"
       :rows="rows"
       :value="value"
-      @change="$emit('update', $event.target.value)"
+      @keyup="$emit('update', $event.target.value)"
     ></textarea>
   </div>
 </template>
