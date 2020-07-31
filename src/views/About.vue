@@ -1,5 +1,6 @@
 <template>
   <div class="about">
-    <h1>This is an about page</h1>
+    <p>Memorea is a PWA for memo.</p>
+    <p>It automatically saves text to your browser's local storage.</p>
   </div>
 </template>
