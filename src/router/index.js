@@ -26,8 +26,4 @@ const router = new VueRouter({
   routes
 })
 
-router.afterEach((to, from) => {
-  gtag('config', 'UA-151388535-6', {'page_path': to.path})
-})
-
 export default router
