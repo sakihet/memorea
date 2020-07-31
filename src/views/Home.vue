@@ -4,15 +4,9 @@
       :cols="80"
       :rows="24"
       :value="text"
-      @update="text = $event"
+      @update="onUpdate($event)"
     />
     <div class="buttons-container">
-      <div class="button-cell">
-        <AppButton
-          text="save"
-          @onClick="save()"
-        />
-      </div>
       <div class="button-cell">
         <AppButton
           text="clear"
@@ -35,19 +29,22 @@ export default {
   },
   data: function () {
     return {
-      text: ''
+    }
+  },
+  created () {
+    this.$store.dispatch('init')
+  },
+  computed: {
+    text () {
+      return this.$store.state.text
     }
   },
   methods: {
-    save: function () {
-      console.log('save', this.text)
-    },
     clear: function () {
-      console.log('clear')
-      this.text = ''
+      this.$store.dispatch('update', '')
     },
-    update: function () {
-      console.log('update')
+    onUpdate: function (value) {
+      this.$store.dispatch('update', value)
     }
   }
 }
