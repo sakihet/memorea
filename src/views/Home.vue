@@ -14,6 +14,11 @@
         />
       </div>
     </div>
+    <div class="footer">
+      <div class="footer-left">
+        <span>Chars: {{ text.length }}</span>
+      </div>
+    </div>
   </div>
 </template>
 
@@ -57,5 +62,12 @@ export default {
 }
 .button-cell {
   flex: 1;
+}
+.footer {
+  display: flex;
+  flex-direction: row;
+}
+.footer-left {
+  text-align: left;
 }
 </style>
