@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/*"
+  to = "/?path=:splat"
+  status = 301
+  force = false
