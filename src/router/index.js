@@ -9,7 +9,14 @@ const routes = [
   {
     path: '/',
     name: 'Home',
-    component: Home
+    component: Home,
+    beforeEnter: (to, from, next) => {
+      if (to.query.path) {
+        router.replace(`${to.query.path}`)
+      } else {
+        next()
+      }
+    }
   },
   {
     path: '/about',
